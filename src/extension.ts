@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 		if (editor) {
 			const position = editor.selection.active;
 			const filePath = editor.document.uri.fsPath;
-			const content = `vscode://file${filePath}:${position.line+1}:${position.character}`;
+			const content = `vscode://file/${filePath}:${position.line+1}:${position.character}`;
 			copy(content);
 			vscode.window.showInformationMessage('copied.');
 		} else {
