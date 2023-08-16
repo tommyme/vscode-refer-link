@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "code-refer-ts.helloWorld",
-        "title": "Hello World"
+        "command": "code-refer-ts.copyVscodeReferLink",
+        "title": "copy vscode refer link"
       }
     ]
   },
@@ -41,6 +41,6 @@
     "typescript": "^5.1.3"
   },
   "dependencies": {
-    "clipboardy": "^3.0.0"
+    "clipboardy": "^2.3.0"
   }
 }
