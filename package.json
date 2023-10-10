@@ -20,8 +20,26 @@
       {
         "command": "code-refer-ts.InsertRandomFlag",
         "title": "insert random flag in current cursors"
+      },
+      {
+        "command": "code-refer-ts.RepeatLastCommand",
+        "title": "repeat last command"
+      },
+      {
+        "command": "code-refer-ts.CopyWindowRelativePath",
+        "title": "copy windows rel path"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "code-refer-ts.CopyWindowRelativePath"
+        },
+        {
+          "command": "code-refer-ts.CopyWindowRelativePath"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
