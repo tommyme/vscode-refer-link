@@ -28,10 +28,19 @@ export function activate(context: vscode.ExtensionContext) {
 		} else {
 			vscode.window.showInformationMessage('no file is open');
 		}
-
+	});
+	context.subscriptions.push(disposable);
+	let disposable1 = vscode.commands.registerCommand('code-refer-ts.InsertRandomFlag', ()=>{
+		const editor = vscode.window.activeTextEditor;
+		if (editor) {
+			editor.edit(editBuilder => {
+				editor.selections.forEach(selection => {
+					editBuilder.insert(selection.active, 'aaa');
+				});
+			});
+		}
 	});
 
-	context.subscriptions.push(disposable);
 }
 
 // This method is called when your extension is deactivated

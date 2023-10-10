@@ -2,7 +2,7 @@
   "name": "code-refer-ts",
   "displayName": "code-refer-ts",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -16,6 +16,10 @@
       {
         "command": "code-refer-ts.copyVscodeReferLink",
         "title": "copy vscode refer link"
+      },
+      {
+        "command": "code-refer-ts.InsertRandomFlag",
+        "title": "insert random flag in current cursors"
       }
     ]
   },
