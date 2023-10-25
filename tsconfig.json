@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "ES2020",
+		"module": "commonjs",   // 编译出来的结果
+		"target": "ES2020",		// 编译目标 
 		"outDir": "out",
 		"lib": [
-			"ES2020"
+			"ES2020"	// 让编译器在编译时检查代码是否符合 ES2020 的规范
 		],
 		"sourceMap": true,
 		"rootDir": "src",

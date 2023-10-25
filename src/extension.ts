@@ -84,6 +84,20 @@ export function activate(context: vscode.ExtensionContext) {
 		copyRelativePath(uri);
 	});
 	context.subscriptions.push(disposable3);
+	let disposable4 = vscode.commands.registerCommand("code-refer-ts.DoubleBackSlash", (uri) => {
+		const editor = vscode.window.activeTextEditor;
+		if (editor) {
+      const selection = editor.selection;
+      const selectedText = editor.document.getText(selection);
+			vs_console.appendLine("selected Text: " + selectedText);
+			const newContent = selectedText.replace(/\\/g, "\\\\")
+      editor.edit(editBuilder => {
+        editBuilder.replace(selection, newContent);
+      });
+		}
+
+	});
+	context.subscriptions.push(disposable4);
 }
 
 // This method is called when your extension is deactivated

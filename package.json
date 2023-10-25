@@ -28,6 +28,10 @@
       {
         "command": "code-refer-ts.CopyWindowRelativePath",
         "title": "copy windows rel path"
+      },
+      {
+        "command": "code-refer-ts.DoubleBackSlash",
+        "title": "fix windows path double backslash"
       }
     ],
     "menus": {
