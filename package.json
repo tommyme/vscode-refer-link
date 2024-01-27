@@ -31,7 +31,15 @@
       },
       {
         "command": "code-refer-ts.DoubleBackSlash",
-        "title": "fix windows path double backslash"
+        "title": "fix-path: windows path double backslash"
+      },
+      {
+        "command": "code-refer-ts.toLinuxPath",
+        "title": "fix-path: windows path to linux path"
+      },
+      {
+        "command": "code-refer-ts.toWindowsPath",
+        "title": "fix-path: linux path to windows path"
       }
     ],
     "menus": {

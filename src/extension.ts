@@ -98,6 +98,36 @@ export function activate(context: vscode.ExtensionContext) {
 
 	});
 	context.subscriptions.push(disposable4);
+	let disposable5 = vscode.commands.registerCommand("code-refer-ts.toLinuxPath", (uri) => {
+		const editor = vscode.window.activeTextEditor;
+		if (editor) {
+      const selection = editor.selection;
+      const selectedText = editor.document.getText(selection);
+			vs_console.appendLine("selected Text: " + selectedText);
+			// 先把\\换成\, 再把\换成/
+			let newContent = selectedText.replace(/\\\\/g, "\\")
+			newContent = newContent.replace(/\\/g, "/")
+      editor.edit(editBuilder => {
+        editBuilder.replace(selection, newContent);
+      });
+		}
+	})
+	context.subscriptions.push(disposable5);
+	let disposable6 = vscode.commands.registerCommand("code-refer-ts.toWindowsPath", (uri) => {
+		const editor = vscode.window.activeTextEditor;
+		if (editor) {
+      const selection = editor.selection;
+      const selectedText = editor.document.getText(selection);
+			vs_console.appendLine("selected Text: " + selectedText);
+			// 把/换成\\
+			let newContent = selectedText.replace(/\//g, "\\\\")
+      editor.edit(editBuilder => {
+        editBuilder.replace(selection, newContent);
+      });
+		}
+	})
+	context.subscriptions.push(disposable6);
+
 }
 
 // This method is called when your extension is deactivated
